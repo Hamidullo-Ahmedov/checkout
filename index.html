@@ -3,57 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-
-  <!-- Normalize CSS -->
-  <link rel="stylesheet" href="./styles/normalize.css">
+  <title>Checkout</title>
 
   <!-- Main CSS -->
-  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./bootstrap/scss/bootstrap.css">
 
   <!-- <link rel="stylesheet" href="./styles/min.css"> -->
 
 </head>
 <body>
-  
-  <!-- header part starts -->
-
-  <header class="site-header">
-    <div class="container">
-      <div class="header-wrapper">
-        <a class="site-logo" href="./index.html">
-          <img class="logo-img"
-          width=""
-          height=""
-          src="" alt="">
-        </a>
-        <nav class="navbar">
-          <ul class="navbar-list">
-            <li class="navbar-item">
-              <a href="#">
-
-              </a>
-            </li>
-            <li class="navbar-item">
-              <a href="#">
-
-              </a>
-            </li>
-            <li class="navbar-item">
-              <a href="#">
-
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <a class="sign-up" href="#">
-
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <!-- header part ends -->
 
   <!-- site main starts -->
 
@@ -62,9 +20,241 @@
     <!-- hero section starts -->
 
     <section class="hero">
-      <div class="container">
-        <div class="hero-wrapper">
-
+      <div class="container w-75 p-3">
+        <div class="hero__wrapper py-5">
+          <a class="d-flex justify-content-center mb-4" href="./index.html">
+            <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg" 
+            width="72"
+            height="57"
+            alt="bootstrap img">
+          </a>
+          <h1 class="text-center">
+            Checkout form
+          </h1>
+          <p class="lead text-center mb-5">
+            Below is an example form built entirely with Bootstrap’s form controls. Each required form group 
+            has a validation state that can be triggered by attempting to submit the form without 
+            completing it.
+          </p>
+          <div class="row hero__content-wrapper g-5">
+            <div class="col-md-7 col-lg-8 hero__inner">
+              <h2 class="h4">
+                Billing address
+              </h2>
+              <form action="https://echo.htmlacademy.ru/courses" method="post">
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <label class="form-label" for="firstname">First name</label>
+                    <input class="form-control" name="firstname" id="firstname" type="text" required>
+                    <div class="invalid-feedback">
+                      Valid first name is required
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <label class="form-label" for="firstname">Last name</label>
+                    <input class="form-control" name="firstname" id="firstname" type="text" required>
+                    <div class="invalid-feedback">
+                      Valid last name is required
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <label class="form-label" for="username">Username</label>
+                    <input class="form-control" name="username"
+                    id="username" type="text" placeholder="Username" required>
+                    <div class="invalid-feedback">
+                      Valid your username is required
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <label class="form-label" for="email">Email 
+                      <span class="text-body-secondary">(Optional)</span></label>
+                    <input class="form-control" name="email"
+                    id="email" type="email" placeholder="you@example.com">
+                  </div>
+                  <div class="col-sm-12">
+                    <label class="form-label" for="address">Address</label>
+                    <input class="form-control" name="address"
+                    id="address" type="address" placeholder="1234 Main ct" required>
+                    <div class="invalid-feedback">
+                      Please enter your shipping address
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <label class="form-label" for="address">Address 
+                      <span class="text-body-secondary">(Optional)</span></label>
+                    <input class="form-control" name="address"
+                    id="address" type="address" placeholder="Apartment or suit">
+                  </div>
+                  <div class="col-md-5">
+                    <label for="country" class="form-label">Country</label>
+                    <select class="form-select" name="country" id="country" required>
+                      <option value="">Choose...</option>
+                      <option value="Uzbekistan">Uzbekistan</option>
+                      <option value="Kazakhstan">Kazakhstan</option>
+                      <option value="Turkmenistan">Turkmenistan</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid country
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="State" class="form-label">State</label>
+                    <select class="form-select" name="state" id="state" required>
+                      <option value="">Choose...</option>
+                      <option value="Tashkent">Tashkent</option>
+                      <option value="Andijan">Andijan</option>
+                      <option value="Ferghana">Ferghana</option>
+                      <option value="Almata">Almata</option>
+                      <option value="Shymkent">Shymkent</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid state
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <label for="zip" class="form-label">Zip</label>
+                    <input class="form-control" name="zip" id="zip" type="text" required>
+                    <div class="invalid-feedback">
+                      Please select a valid zip code
+                    </div>
+                  </div>
+                </div>
+                <hr class="my-4">
+                <div class="form__check">
+                  <input class="form-check-input" name="same-address" id="same-address" type="checkbox">
+                  <label class="form-check-label" 
+                  for="same-address">Shipping address is the same as my billing address</label>
+                </div>
+                <div class="form__check">
+                  <input class="form-check-input" name="info" id="info" type="checkbox">
+                  <label class="form-check-label" 
+                  for="info">Save this information for next time</label>
+                </div>
+                <hr class="my-4">
+                <h2 class="h4">
+                  Payment
+                </h2>
+                <div class="my-3">
+                  <div class="form__radio">
+                    <input class="form-check-label" name="Payment" id="credit-card" type="radio"
+                     checked required>
+                     <label class="form-check-label" for="credit-card">Credit card</label>
+                  </div>
+                  <div class="form__radio">
+                    <input class="form-check-label" name="Payment" id="debit-card" type="radio"
+                     required>
+                     <label class="form-check-label" for="debit-card">Debit card</label>
+                  </div>
+                  <div class="form__radio">
+                    <input class="form-check-label" name="Payment" id="PayPal" type="radio"
+                     required>
+                     <label class="form-check-label" for="PayPal">PayPal</label>
+                  </div>
+                </div>
+                <div class="row gy-3">
+                  <div class="col-md-6">
+                    <label class="form-label" for="card-name">Name on card</label>
+                    <input class="form-control" name="card-name" id="card-name" type="text" required>
+                    <small class="text-body-secondary">Full name as displayed on card</small>
+                    <div class="invalid-feedback">Name on card is required</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="card-number">Credit card number</label>
+                    <input class="form-control" name="card-number" id="card-number" type="text" required>
+                    <div class="invalid-feedback">Name on card is required</div>
+                  </div>
+                  <div class="col-md-3">
+                    <label class="form-label" for="expiration">Expiration</label>
+                    <input class="form-control" name="expiration" id="expiration" type="text" required>
+                    <div class="invalid-feedback">Expiration date is required</div>
+                  </div>
+                  <div class="col-md-3">
+                    <label class="form-label" for="cvv">CVV</label>
+                    <input class="form-control" name="cvv" id="cvv" type="text" required>
+                    <div class="invalid-feedback">CVV is required</div>
+                  </div>
+                </div>
+                <hr class="my-4">
+                <button class="btn btn-primary w-100 btn-lg" type="submit">
+                  Continue to checkout
+                </button>
+              </form>
+            </div>
+            <div class="col-md-5 col-lg-4 hero__cart">
+              <div class="hero__cart-inner d-flex justify-content-between align-items-center mb-3">
+                <h3 class="h4 text-primary">
+                  Your cart
+                </h3>
+                <span class="badge bg-primary rounded-pill">3</span>
+              </div>
+              <ul class="hero__list list-group mb-3">
+                <li class="list-group-item d-flex justify-content-between">
+                  <div class="hero__list-inner">
+                    <h4 class="h6 my-0">
+                      Product name
+                    </h4>
+                    <small class="text-body-secondary">Brief description</small>
+                  </div>
+                  <ins class="text-body-secondary text-decoration-none">
+                    $12
+                  </ins>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                  <div class="hero__list-inner">
+                    <h4 class="h6 my-0">
+                      Second product
+                    </h4>
+                    <small class="text-body-secondary">Brief description</small>
+                  </div>
+                  <ins class="text-body-secondary text-decoration-none">
+                    $8
+                  </ins>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                  <div class="hero__list-inner">
+                    <h4 class="h6 my-0">
+                      Third item
+                    </h4>
+                    <small class="text-body-secondary">Brief description</small>
+                  </div>
+                  <ins class="text-body-secondary text-decoration-none">
+                    $5
+                  </ins>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                  <div class="hero__list-inner">
+                    <h4 class="h6 my-0 text-success">
+                      Promo code
+                    </h4>
+                    <small class="text-success">EXAMPLECODE</small>
+                  </div>
+                  <ins class="text-decoration-none text-success">
+                    −$5
+                  </ins>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                  <div class="hero__list-inner">
+                    <h4 class="h6 my-0">
+                      Total (USD)
+                    </h4>
+                  </div>
+                  <ins class="text-decoration-none">
+                    <strong>
+                      $20
+                    </strong>
+                  </ins>
+                </li>
+              </ul>
+              <form class="card p-2">
+                <div class="input-group">
+                  <input class="form-control" name="promo-code" type="text" placeholder="Promo code">
+                  <button class="btn btn-secondary" type="submit">
+                    Reedem
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </section>
